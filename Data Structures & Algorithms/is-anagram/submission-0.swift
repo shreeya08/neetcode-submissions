@@ -1,0 +1,15 @@
+class Solution {
+    func isAnagram(_ string1: String, _ string2: String) -> Bool {
+    var counts1: [Character: Int] = [:]
+    var counts2: [Character: Int] = [:]
+    
+    string1.forEach { char in
+        counts1[char, default: 0] += 1
+    }
+    string2.forEach { char in
+        counts2[char, default: 0] += 1
+    }
+    
+    return counts1 == counts2
+}
+}
